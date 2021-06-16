@@ -11,19 +11,19 @@ class Sql extends PDO { //herança do sistema da classe PDO
 	}
 
 
-	private function setParams($statments, $parameters = array()){
+	private function setParams($statements, $parameters = array()){
 
 		foreach ($parameters as $key => $value) {
 			
-			$this->setParam($key, $value);
+			$this->setParam($statements, $key, $value);
 
 		}
 
 	}
 
-	private function setParam($statment, $key, $value){
+	private function setParam($statement, $key, $value){
 
-		$statment->bindParam($key, $value);
+		$statement->bindParam($key, $value);
 	}
 
 
