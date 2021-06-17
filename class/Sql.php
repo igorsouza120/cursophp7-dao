@@ -37,7 +37,6 @@ class Sql extends PDO { //herança do sistema da classe PDO
 
 		return $stmt;
 
-
 	}
 
 
