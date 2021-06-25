@@ -1,5 +1,7 @@
 <?php
 
+echo "hello word"
+
 require_once("config.php");
 
 // carrega apenas 1 usuário.
