@@ -1,7 +1,5 @@
 <?php
 
-
-
 require_once("config.php");
 
 // carrega apenas 1 usuário.
@@ -23,14 +21,22 @@ require_once("config.php");
 //$usuario->login("Igor","1234");
 //echo $usuario;
 
+//Criando um novo usuário
+//$aluno = new Usuario("jozezinho", "44444");
+//$aluno->insert();
+//echo $aluno;
 
-$aluno = new Usuario("Jon Snow", "Muralha");
 
-$aluno->insert();
+//FAZENDO UPDATE
 
+$usuario = new Usuario();
 
+$usuario->loadById(8);
 
-echo $aluno;
+$usuario->update("professor", "!@#$%¨&*");
+
+echo $usuario;
+
 
 
 ?>

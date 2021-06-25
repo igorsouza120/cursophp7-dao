@@ -52,7 +52,7 @@ class Usuario {
 		if (count($results) > 0){ //verificar se existe o ID que foi passado para consulta.
 
 		
-			$this->setData($result[0]);
+			$this->setData($results[0]);
 
 
 		} // fim do if
@@ -135,6 +135,26 @@ class Usuario {
 		}
 
 	}
+
+	public function update($login, $password){
+
+		$this->setDeslogin($login);
+		$this->setDessenha($password);
+
+
+		$sql = new Sql();
+
+        $sql->execQuery("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID", array(
+            ':LOGIN'=>$this->getDeslogin(),
+            ':PASSWORD'=>$this->getDessenha(),
+            ':ID'=>$this->getIdusuario()
+
+		));
+
+	}
+
+
+
 
 	public function __construct($login = "",$password = ""){
 
