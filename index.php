@@ -1,5 +1,7 @@
 <?php
 
+echo "teste";
+
 require_once("config.php");
 
 // carrega apenas 1 usuário.
