@@ -1,7 +1,5 @@
 <?php
 
-echo "hello word"
-
 require_once("config.php");
 
 // carrega apenas 1 usuário.
@@ -19,11 +17,18 @@ require_once("config.php");
 //echo json_encode($search);
 
 // Carregar usuário usando o login e a senha.
-$usuario = new Usuario();
-$usuario->login("Igor","1234");
+//$usuario = new Usuario();
+//$usuario->login("Igor","1234");
+//echo $usuario;
 
 
-echo $usuario;
+$aluno = new Usuario("Jon Snow", "Muralha");
+
+$aluno->insert();
+
+
+
+echo $aluno;
 
 
 ?>
